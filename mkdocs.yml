@@ -1,0 +1,65 @@
+site_name: "Yeti Industrial IoT Gateway"
+site_description: "Complete documentation for the Yeti Industrial IoT Gateway - connecting Modbus devices to cloud platforms"
+docs_dir: wiki
+# repo_url: https://github.com/nepaldigitalsystems/yeti
+use_directory_urls: false
+theme:
+  name: material
+  logo: assets/YETI/yeti_white_icon.png
+  favicon: assets/YETI/favicon.ico
+  features:
+    - navigation.instant
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - scheme: minimal
+      primary: black
+      accent: grey
+      toggle: false
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      title: On this page
+plugins:
+  - search:
+      lang: en
+nav:
+  - Overview: overview.md
+  - Hardware Architecture: hardware.md
+  - System Architecture: system_architecture.md
+  - API Reference:
+      - ThingsBoard Data: api/thingsboard_data.md
+      - System Configuration:
+          - Session Management: api/session.md
+          - Network Configuration: api/network.md
+          - ThingsBoard Configuration: api/thingsboard_setup.md
+          - Modbus Device Management: api/modbus_devices.md
+          - Modbus Connection Settings: api/modbus_connection.md
+          - Rs232 Communication: api/communication.md
+          - User Management: api/user.md
+          - System: api/system.md
+          - Status Response: api/response.md
+  - Features:
+      - BLE: features/ble.md
+  - Development:
+      - Development Principles: development/principle.md
+      - Coding Guidelines: development/coding_guidelines.md

@@ -43,7 +43,7 @@ plugins:
   - search:
       lang: en
 nav:
-  - Overview: overview.md
+  - Overview: index.md
   - Hardware Architecture: hardware.md
   - System Architecture: system_architecture.md
   - API Reference:

@@ -7,7 +7,7 @@ The system operates through two primary workflows: **Data Flow** for normal oper
 ```mermaid
 flowchart LR
     classDef block fill:#e5e5e5,stroke:#555,stroke-width:1px,color:#111;
-    classDef block0 fill:#d0d0d0,stroke:#555,stroke-width:2px,color:#111;
+    classDef block0 fill:#d4d4d4,stroke:#555,stroke-width:2px,color:#111;
 
     Sensors["Industrial Devices"]:::block
     Gateway["**Yeti Gateway**"]:::block0
@@ -39,7 +39,7 @@ flowchart LR
 ```mermaid
 flowchart LR
     classDef block fill:#e5e5e5,stroke:#555,stroke-width:1px,color:#111;
-    classDef block0 fill:#d0d0d0,stroke:#555,stroke-width:2px,color:#111;
+    classDef block0 fill:#d4d4d4,stroke:#555,stroke-width:2px,color:#111;
 
     %% Nodes
     PC["User Device<br>(Phone/Laptop)"]:::block

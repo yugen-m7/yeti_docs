@@ -29,4 +29,3 @@ The gateway is designed for versatile connectivity:
     - Wi-Fi (Access Point and Station modes)
     - Bluetooth Low Energy (BLE)
 
-For detailed schematics, please refer to the `yeti-hardware/` directory.

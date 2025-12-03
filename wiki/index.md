@@ -22,12 +22,13 @@ For more detail go to [Feature](feature.md)
 Get your Yeti gateway up and running in minutes:
 
 1. **Power On** - Connect 12V DC jack power supply
-2. **Connect** - Access device WiFi access point or connect via Ethernet
-3. **Login** - Use credentials through captive portal interface
-4. **Configure Network** - Set up WiFi/Ethernet connectivity
-5. **Add Devices** - Configure your Modbus devices and register mappings
-6. **Setup Modbus** - Configure connection parameters (RTU/TCP)
-7. **Cloud Integration** - Set up ThingsBoard MQTT connection
-8. **Apply & Reboot** - Save settings and restart to activate configuration
+2. **Connect** - Connect to device WiFi access point or connect the device to Ethernet
+3. **Web-portal** - Go to device's Web-Portal `192.168.192.168`
+4. **Login** - Use credentials through captive portal interface
+5. **Configure Network** - Set up WiFi/Ethernet connectivity
+6. **Add Devices** - Configure your Modbus devices and register mappings
+7. **Setup Modbus** - Configure connection parameters (RTU/TCP)
+8. **Cloud Integration** - Set up ThingsBoard MQTT connection
+9. **Apply & Reboot** - Save settings and restart to activate configuration
 
 For more detail go to [Device Setup](device_setup.md)

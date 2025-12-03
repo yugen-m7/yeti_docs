@@ -1,8 +1,6 @@
-# System Configuration
+# Populate 
 
-## System Settings Status
-
-Verify session validity and retrieve complete system configuration.
+Verify session validity and populate configuration on web portal.
 
 ### Request
 

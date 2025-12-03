@@ -7,9 +7,10 @@ The system operates through two primary workflows: **Data Flow** for normal oper
 ```mermaid
 flowchart LR
     classDef block fill:#e5e5e5,stroke:#555,stroke-width:1px,color:#111;
+    classDef block0 fill:#d0d0d0,stroke:#555,stroke-width:2px,color:#111;
 
     Sensors["Industrial Devices"]:::block
-    Gateway["Yeti Gateway"]:::block
+    Gateway["**Yeti Gateway**"]:::block0
     TB["ThingsBoard <br> Cloud Platform"]:::block
     App["Application Server"]:::block
 
@@ -19,10 +20,17 @@ flowchart LR
     TB -->|Control Commands| Gateway
 ```
 
-1. **Data Acquisition (Industrial Devices → Yeti Gateway):** The gateway actively polls and collects raw sensor data from connected industrial devices (e.g., Modbus) at configurable intervals.
-2. **Telemetry Ingestion (Yeti Gateway → ThingsBoard):** The collected data is securely transmitted and ingested into the cloud platform using MQTTS (MQTT over TLS/SSL) for reliable and encrypted transport.
-3. **Data Integration (ThingsBoard → Application Server):** The Application Server retrieves aggregated, processed, or real-time data from ThingsBoard using its secure REST API for deeper analysis, custom dashboards, and business logic execution.
-4. **Control Commands (ThingsBoard → Yeti Gateway):** The cloud platform provides remote management capabilities, allowing for over-the-air (OTA) firmware updates, configuration changes, or sending direct control commands back to the gateway.
+1. **Data Acquisition _(Industrial Devices -> Yeti Gateway)_**  
+   The gateway polls connected industrial devices (e.g., Modbus) at configurable intervals and collects raw sensor data.
+
+2. **Telemetry Ingestion _(Yeti Gateway -> ThingsBoard)_**  
+   The gateway sends collected data to the cloud over MQTTS (MQTT over TLS/SSL), ensuring encrypted and reliable transmission.
+
+3. **Data Integration _(ThingsBoard -> Application Server)_**  
+   The Application Server retrieves real-time, aggregated, or processed data from ThingsBoard via its secure REST API for analytics, dashboards, and business logic.
+
+4. **Control Commands _(ThingsBoard -> Yeti Gateway)_**  
+   ThingsBoard enables remote management, including OTA firmware updates, configuration adjustments, and direct control commands sent back to the gateway.
 
 ### Configuration Flow
 
@@ -31,18 +39,22 @@ flowchart LR
 ```mermaid
 flowchart LR
     classDef block fill:#e5e5e5,stroke:#555,stroke-width:1px,color:#111;
+    classDef block0 fill:#d0d0d0,stroke:#555,stroke-width:2px,color:#111;
 
-    %% Subgroups (optional but cleaner in MkDocs)
-        PC["User Device </br> (Phone/Laptop)"]:::block
-        Gateway["Yeti Gateway"]:::block
+    %% Nodes
+    PC["User Device<br>(Phone/Laptop)"]:::block
+    Gateway["**Yeti Gateway**"]:::block0
 
-    %% Flows
-    PC -->| Data Acquisition| Gateway
-    Gateway -->| Telemetry Upload| PC
-
+    %% Flows (top → middle → bottom)
+    PC -->|Local Connection| Gateway
+    Gateway <-->|Parameter Configuration| PC
 ```
 
 </div>
 
-1. **Local Connection (User Device → Yeti Gateway):** The user device (Phone/PC) establishes a temporary connection to the Yeti Gateway, typically via a local Wi-Fi Access Point (AP) mode or BLE, for initial setup.
-2. **Parameter Configuration (User Device → Yeti Gateway):** The user transfers necessary setup parameters (e.g., cloud credentials, device connection strings, polling intervals) to the gateway before deployment.
+1. **Local Connection _(User Device -> Yeti Gateway)_**  
+   The user device (phone or PC) temporarily connects to the Yeti Gateway—typically via a local Wi-Fi access point (AP mode) or BLE—to perform initial setup.
+
+2. **Parameter Configuration _(Yeti Gateway <-> User Device)_**  
+   The user sends required configuration parameters (e.g., cloud credentials, device connection strings, polling intervals) to the gateway before deployment.
+

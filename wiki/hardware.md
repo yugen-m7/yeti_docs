@@ -1,4 +1,4 @@
-# Hardware Architecture
+# Hardware Specification 
 
 The Yeti Industrial IoT Gateway is built around the powerful **Espressif ESP32-S3** System-on-Chip (SoC). This choice provides a robust foundation with a dual-core processor, ample memory, and a rich set of peripherals.
 
@@ -8,9 +8,9 @@ The Yeti Industrial IoT Gateway is built around the powerful **Espressif ESP32-S
     - **CPU**: Dual-core Xtensa® LX7 microprocessor
     - **Memory**: Internal SRAM and ROM
     - **Wireless**: Wi-Fi 802.11 b/g/n and Bluetooth 5 (LE)
-    - **Temperature Sensor**: On-board temperature monitoring.
 - **Peripherals**:
     - **Ethernet**: Wired connectivity via an external PHY.
+    - **Temperature Sensor**: On-board temperature monitoring.
     - **RS232/RS485**: For serial communication with industrial devices.
     - **CAN Bus**: Using the TWAI (Two-Wire Automotive Interface) controller for robust communication in noisy environments.
     - **GPIO, I2C, SPI**: For connecting a wide range of sensors, displays, and other components.

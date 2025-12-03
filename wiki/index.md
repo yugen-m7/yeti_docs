@@ -4,24 +4,18 @@ The Yeti Industrial IoT Gateway is a robust, enterprise-ready device that bridge
 
 ### Key Features
 
-- **Advanced Protocol Support**:
-    - **Modbus**: Acts as a Modbus master for both RTU (via RS485) and TCP protocols.
-    - **RS232**: Dedicated serial communication interface.
-    - **TWAI (CAN)**: Two-Wire Automotive Interface for CAN bus connectivity.
+- **Multi-Protocol Support:**  
+   Works with multiple industrial communication standards (RS-485, RS-232, CAN)
+- **Flexible Connectivity:**  
+   Supports Wi-Fi, Ethernet, and BLE for configuration and data visualization.
+- **Robust Modbus Communication:**  
+   Handles both Modbus RTU and TCP simultaneously with up to 16 devices.
+- **Over-the-Air (OTA) Updates:**  
+  Manage and update gateway firmware remotely via the cloud.
+- **Remote Monitoring:**  
+   Real-time data visualization from anywhere using a dedicated Application Server.
 
-- **Dual-Mode Configuration**:
-    - **Web Interface**: An intuitive, browser-based UI for complete device configuration and management.
-    - **Bluetooth LE**: Allows for quick, on-site configuration of network and device settings directly from a mobile device.
-
-- **Flexible Networking**:
-    - **WiFi & Ethernet**: Supports both WiFi (AP/STA) and wired Ethernet (W5500) for reliable network access.
-    - **mDNS Discovery**: Easily discover the gateway on a local network using a configurable hostname.
-    - **Captive Portal**: Simplifies initial WiFi setup by redirecting new devices to the configuration page.
-
-- **Robust Cloud Integration**:
-    - **Secure MQTT**: Connects to cloud platforms like ThingsBoard using secure, certificate-based MQTT.
-    - **Over-the-Air (OTA) Updates**: Reliably update device firmware remotely.
-    - **Remote Logging**: Caches and forwards system logs to the cloud, ensuring no data is lost during network outages.
+For more detail go to [Feature](feature.md)
 
 ### Quick Start Guide
 
@@ -35,3 +29,5 @@ Get your Yeti gateway up and running in minutes:
 6. **Setup Modbus** - Configure connection parameters (RTU/TCP)
 7. **Cloud Integration** - Set up ThingsBoard MQTT connection
 8. **Apply & Reboot** - Save settings and restart to activate configuration
+
+For more detail go to [Device Setup](device_setup.md)

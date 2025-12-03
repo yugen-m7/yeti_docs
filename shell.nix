@@ -4,7 +4,4 @@ pkgs.mkShell {
     python313Packages.mkdocs-material
   ];
 
-  shellHook = ''
-    mkdocs serve -a 0.0.0.0:9813
-  '';
 }

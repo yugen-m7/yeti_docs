@@ -5,8 +5,8 @@ docs_dir: wiki
 use_directory_urls: false
 theme:
   name: material
-  logo: assets/YETI/yeti_white_icon.png
-  favicon: assets/YETI/favicon.ico
+  logo: assets/logo/yeti_white_icon.png
+  favicon: assets/logo/favicon.ico
   features:
     - navigation.instant
     - search.suggest
@@ -44,8 +44,10 @@ plugins:
       lang: en
 nav:
   - Overview: index.md
-  - Hardware Architecture: hardware.md
+  - Features: feature.md
+  - Hardware Specification: hardware.md
   - System Architecture: system_architecture.md
+  - Device Setup: device_setup.md
   # - API Reference:
   #     - ThingsBoard Data: api/thingsboard_data.md
   #     - System Configuration:

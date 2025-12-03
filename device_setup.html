@@ -439,10 +439,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-5-verification" class="md-nav__link">
+  <a href="#part-5-data-visualization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 5: Verification
+        Part 5: Data Visualization
       
     </span>
   </a>
@@ -539,10 +539,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-5-verification" class="md-nav__link">
+  <a href="#part-5-data-visualization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 5: Verification
+        Part 5: Data Visualization
       
     </span>
   </a>
@@ -568,42 +568,44 @@
 
   <h1>Device Setup</h1>
 
-<!-- ### Yeti Gateway Setup Guide -->
-
 <p>This document outlines the step-by-step process for setting up and configuring the Yeti Gateway, including network connection, Modbus configuration, and cloud integration.</p>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <ul>
 <li>A Yeti Gateway device</li>
 <li>The device's MAC address (specifically the last 4 digits)</li>
-<li>WiFi network credentials (SSID and Password)</li>
-<li>Cloud server credentials and certificate files</li>
+<li>Local WiFi network credentials (SSID and Password)</li>
+<li>Cloud server credentials and certificate files (Provided with the device)</li>
 </ul>
 <h3 id="part-1-initial-connection-network-setup">Part 1: Initial Connection &amp; Network Setup<a class="headerlink" href="#part-1-initial-connection-network-setup" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Connect to the Access Point</p>
-<ul>
+<ol>
 <li>Power on the Yeti Gateway.</li>
 <li>On your computer or mobile device, open your WiFi settings.</li>
-<li>Connect to the network named YETI-PRO-ACC.</li>
-<li>Captive Portal:<ul>
-<li>Ideally, a login page will open automatically.</li>
-<li>If it does not, open your WiFi settings for the connected network and select Manage Router (or open a browser and navigate to the gateway IP, typically 192.168.0.1).</li>
+<li>Connect to the network named YETI-PRO-<em>XXXX</em>.<ul>
+<li>replace <em>XXXX</em> with the last 4 digits of device's MAC address</li>
 </ul>
 </li>
+<li>Captive Portal:<ul>
+<li>Ideally, a login page will open automatically.</li>
+<li>If it does not, Go to your prefered web browser and go to <code>http://192.168.192.168</code>.</li>
 </ul>
+</li>
+</ol>
 </li>
 <li>
 <p>Initial Login</p>
 <ul>
-<li>Log in to the local configuration page using the following credentials:<br />
-    Username: yeti-pro-admin<br />
-    Password: The last 4 digits of the device's MAC address.</li>
+<li>Log in to the local configuration page using the following credentials:</li>
 </ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  Username: yeti-pro-admin
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  Password: The last 4 digits of the device&#39;s MAC address.
+</span></code></pre></div>
 </li>
 <li>
 <p>Configure WiFi</p>
-<ul>
+<ol>
 <li>Once logged in, navigate to the WiFi Settings page.</li>
 <li>Enter your local network's SSID and Password.</li>
 <li>IP Configuration:<ul>
@@ -613,38 +615,38 @@
 </li>
 <li>Click Save WiFi Settings.</li>
 <li>Click Restart to apply the changes.</li>
-</ul>
+</ol>
 </li>
 </ol>
 <h3 id="part-2-accessing-the-web-interface">Part 2: Accessing the Web Interface<a class="headerlink" href="#part-2-accessing-the-web-interface" title="Permanent link">&para;</a></h3>
-<ul>
+<ol>
 <li>After the device restarts, it will be connected to your local network. You can now access it using its hostname rather than the direct access point.</li>
 <li>Connect your computer/phone to the same local network as the Yeti Gateway.</li>
-<li>Open a web browser and navigate to:<ul>
-<li>http://yeti-pro-{XXXX}.local</li>
-<li>(Replace {XXXX} with the last 4 digits of the device's MAC address)</li>
+<li>Open a web browser and navigate to <code>http://yeti-pro-XXXX.local</code>:<ul>
+<li>replace <em>XXXX</em> with the last 4 digits of device's MAC address</li>
 </ul>
 </li>
-<li>Log in again using the same credentials:<ul>
-<li>Username: yeti-pro-admin</li>
-<li>Password: Last 4 digits of MAC address.</li>
-</ul>
-</li>
-</ul>
+<li>Log in again using the same credentials:
+      <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  Username: yeti-pro-admin
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  Password: The last 4 digits of the device&#39;s MAC address.
+</span></code></pre></div></li>
+</ol>
 <h3 id="part-3-modbus-configuration">Part 3: Modbus Configuration<a class="headerlink" href="#part-3-modbus-configuration" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Configure Connection Settings</p>
-<ul>
+<p>Configure Connection Settings </p>
+<ol>
 <li>Navigate to the Connection tab.</li>
-<li>Configure the RTU Settings (Baudrate, Parity, Stop Bit, Data Bit).</li>
+<li>Configure the RTU/TCP Settings.<ul>
 <li>Note: These settings must match the settings of your connected Modbus devices.</li>
-<li>Click Save RTU Settings.</li>
 </ul>
+</li>
+<li>Click Save RTU/TCP Settings.</li>
+</ol>
 </li>
 <li>
 <p>Add Modbus Devices</p>
-<ul>
+<ol>
 <li>Navigate to the Modbus tab.</li>
 <li>Click on a device block (e.g., Device 1) to open its settings.</li>
 <li>Enter the Slave ID for the specific hardware you are connecting.</li>
@@ -653,54 +655,56 @@
 <li>Parameter Name</li>
 <li>Unit</li>
 <li>Register Address</li>
-<li>Data Type / Count</li>
+<li>Register count </li>
+<li>Data Type</li>
+<li>Scale</li>
 </ul>
 </li>
 <li>Click Add Register to save the specific data point.</li>
 <li>Repeat for all necessary registers.</li>
 <li>Click Back to Slave List.</li>
 <li>Finally, click Save Modbus Settings on the main Modbus page.</li>
-</ul>
+</ol>
 </li>
 </ol>
 <h3 id="part-4-cloud-configuration">Part 4: Cloud Configuration<a class="headerlink" href="#part-4-cloud-configuration" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Configure Server Settings</p>
-<ul>
+<ol>
 <li>Navigate to the Cloud tab.</li>
 <li>Enter the Server URL (e.g., mqtts://tb.example.com).</li>
 <li>Enter the Port (e.g., 8883).</li>
 <li>Select the QoS Level.</li>
-</ul>
+</ol>
 </li>
 <li>
-<p>Upload Certificates<br />
-   You will need to copy and paste the content of your certificate files into the respective fields:</p>
-<ul>
+<p>Upload Certificates</p>
+<ol>
+<li>You will need to copy and paste the content of your certificate files into the respective fields:<ul>
 <li>Root CA Certificate (PEM)</li>
 <li>Device Certificate (PEM)</li>
 <li>Device Private Key (PEM)</li>
 </ul>
 </li>
+</ol>
+</li>
 <li>
 <p>Save and Restart</p>
-<ul>
+<ol>
 <li>Click Save Cloud Settings.</li>
 <li>Click Restart in the top menu to apply the new cloud configuration.</li>
-</ul>
+</ol>
 </li>
 </ol>
-<h3 id="part-5-verification">Part 5: Verification<a class="headerlink" href="#part-5-verification" title="Permanent link">&para;</a></h3>
+<h3 id="part-5-data-visualization">Part 5: Data Visualization<a class="headerlink" href="#part-5-data-visualization" title="Permanent link">&para;</a></h3>
 <ol>
-<li>To confirm the device is sending data:<ul>
-<li>Open a browser and navigate to the application server: <code>https://garud.cloud</code></li>
+<li>To Visualize the device is sending data:<ol>
+<li>Open a browser and navigate to the application server: <code>https://www.garud.cloud</code></li>
 <li>Log in with your user credentials.</li>
 <li>On the dashboard, locate your device in the Your Devices list.</li>
 <li>Click the device name to view the Live Telemetry Data.</li>
-<li>Data should update automatically (typically every 5 seconds).</li>
-<li>Setup Complete.</li>
-</ul>
+</ol>
 </li>
 </ol>
 

@@ -1,8 +1,9 @@
 ## Robust Modbus Communication
 
-Handles both Modbus RTU and TCP simultaneously with up to 16 devices. With read and write functionality directly from web portal.
+The Gateway supports RTU and TCP communication simultaneously, allowing integration of up to 16 devices. Users can perform both read and write operations directly from the web interface.
 
-- **Multiple Simultaneous Connection Support**
+- **Modbus Device Setup Page**  
+    This section allows users to register and configure their Modbus devices.
   ![dashboard_img](./assets/images/modbus_dev.png)
 
 ## Remote Logging

@@ -49,11 +49,11 @@ This document outlines the step-by-step process for setting up and configuring t
 
 ### Part 3: Modbus Configuration
 
-1. Configure Connection Settings
+1. Configure Connection Settings 
       1. Navigate to the Connection tab.
-      2. Configure the RTU Settings (Baudrate, Parity, Stop Bit, Data Bit).
+      2. Configure the RTU/TCP Settings.
           - Note: These settings must match the settings of your connected Modbus devices.
-      3. Click Save RTU Settings.
+      3. Click Save RTU/TCP Settings.
 
 2. Add Modbus Devices
       1. Navigate to the Modbus tab.
@@ -64,7 +64,9 @@ This document outlines the step-by-step process for setting up and configuring t
           - Parameter Name
           - Unit
           - Register Address
-          - Data Type / Count
+          - Register count 
+          - Data Type
+          - Scale
       6. Click Add Register to save the specific data point.
       7. Repeat for all necessary registers.
       8. Click Back to Slave List.

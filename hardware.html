@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="index.html">
+        <link rel="prev" href="feature.html">
       
       
         <link rel="next" href="system_architecture.html">
@@ -20,12 +20,12 @@
         
       
       
-      <link rel="icon" href="assets/YETI/favicon.ico">
+      <link rel="icon" href="assets/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Hardware Architecture - Yeti Industrial IoT Gateway</title>
+        <title>Hardware Specification - Yeti Industrial IoT Gateway</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hardware-architecture" class="md-skip">
+        <a href="#hardware-specification" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="index.html" title="Yeti Industrial IoT Gateway" class="md-header__button md-logo" aria-label="Yeti Industrial IoT Gateway" data-md-component="logo">
       
-  <img src="assets/YETI/yeti_white_icon.png" alt="logo">
+  <img src="assets/logo/yeti_white_icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hardware Architecture
+              Hardware Specification
             
           </span>
         </div>
@@ -205,7 +205,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="index.html" title="Yeti Industrial IoT Gateway" class="md-nav__button md-logo" aria-label="Yeti Industrial IoT Gateway" data-md-component="logo">
       
-  <img src="assets/YETI/yeti_white_icon.png" alt="logo">
+  <img src="assets/logo/yeti_white_icon.png" alt="logo">
 
     </a>
     Yeti Industrial IoT Gateway
@@ -244,6 +244,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="feature.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -263,7 +290,7 @@
   <span class="md-ellipsis">
     
   
-    Hardware Architecture
+    Hardware Specification
   
 
     
@@ -281,7 +308,7 @@
   <span class="md-ellipsis">
     
   
-    Hardware Architecture
+    Hardware Specification
   
 
     
@@ -372,14 +399,14 @@
   
   
     <li class="md-nav__item">
-      <a href="Configuration.md" class="md-nav__link">
+      <a href="device_setup.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Configuration
+    Device Setup
   
 
     
@@ -459,7 +486,7 @@
 
 
 
-<h1 id="hardware-architecture">Hardware Architecture<a class="headerlink" href="#hardware-architecture" title="Permanent link">&para;</a></h1>
+<h1 id="hardware-specification">Hardware Specification<a class="headerlink" href="#hardware-specification" title="Permanent link">&para;</a></h1>
 <p>The Yeti Industrial IoT Gateway is built around the powerful <strong>Espressif ESP32-S3</strong> System-on-Chip (SoC). This choice provides a robust foundation with a dual-core processor, ample memory, and a rich set of peripherals.</p>
 <h3 id="key-components">Key Components<a class="headerlink" href="#key-components" title="Permanent link">&para;</a></h3>
 <ul>
@@ -467,11 +494,11 @@
 <li><strong>CPU</strong>: Dual-core Xtensa® LX7 microprocessor</li>
 <li><strong>Memory</strong>: Internal SRAM and ROM</li>
 <li><strong>Wireless</strong>: Wi-Fi 802.11 b/g/n and Bluetooth 5 (LE)</li>
-<li><strong>Temperature Sensor</strong>: On-board temperature monitoring.</li>
 </ul>
 </li>
 <li><strong>Peripherals</strong>:<ul>
 <li><strong>Ethernet</strong>: Wired connectivity via an external PHY.</li>
+<li><strong>Temperature Sensor</strong>: On-board temperature monitoring.</li>
 <li><strong>RS232/RS485</strong>: For serial communication with industrial devices.</li>
 <li><strong>CAN Bus</strong>: Using the TWAI (Two-Wire Automotive Interface) controller for robust communication in noisy environments.</li>
 <li><strong>GPIO, I2C, SPI</strong>: For connecting a wide range of sensors, displays, and other components.</li>

@@ -2,9 +2,20 @@
 
 The Gateway supports RTU and TCP communication simultaneously, allowing integration of up to 16 devices. Users can perform both read and write operations directly from the web interface.
 
-- **Modbus Device Setup Page**  
-    This section allows users to register and configure their Modbus devices.
-  ![dashboard_img](./assets/images/modbus_dev.png)
+- **Multiple Modbus Support**  
+    Add and manage up to 16 Modbus devices from a single view.
+  ![modubs_dev](./assets/images/modbus_dev.png)
+
+- **Device configuration**  
+   Users can configure Modbus devices directly from the web portal, including parameters such as device ID, baud rate, function codes, and register mappings.
+  ![modbus_add](./assets/images/modbus_add.png)
+
+- **Modbus Read and Write Operation**  
+   The interface supports both read and write operations for any connected device,
+  <div style="display: flex; gap: 1rem; align-items: flex-start;">
+  <img src="./assets/images/modbus_read.png" style="max-width: 50%; height: auto;">
+  <img src="./assets/images/modbus_write.png" style="max-width: 50%; height: auto;">
+  </div>
 
 ## Remote Logging
 

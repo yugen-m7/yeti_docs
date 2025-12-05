@@ -2,6 +2,11 @@
 
 The Yeti Industrial IoT Gateway is a robust, enterprise-ready device that bridges the gap between industrial equipment and modern cloud-based IoT platforms. Built for industrial environments, it provides secure, reliable connectivity with comprehensive monitoring and configuration capabilities.
 
+
+<p align="center">
+  <img src="./assets/images/outline/yeti_complete_v2.png" width="80%">
+</p>
+
 ### Key Features
 
 - **Multi-Protocol Support:**  

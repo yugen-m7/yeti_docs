@@ -2,6 +2,12 @@
 
 The Yeti Industrial IoT Gateway is built around the powerful **Espressif ESP32-S3** System-on-Chip (SoC). This choice provides a robust foundation with a dual-core processor, ample memory, and a rich set of peripherals.
 
+<!-- ![hardware](./assets/images/outline/yeti.png) -->
+
+<p align="center">
+  <img src="./assets/images/outline/yeti.png" width="60%">
+</p>
+
 ### Key Components
 
 - **SoC**: Espressif ESP32-S3

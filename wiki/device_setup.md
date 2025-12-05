@@ -8,6 +8,7 @@ This document outlines the step-by-step process for setting up and configuring t
 - Cloud server credentials and certificate files (Provided with the device)
 
 ### Part 1: Initial Connection & Network Setup
+[]()
 
 1. Connect to the Access Point
       1. Power on the Yeti Gateway.

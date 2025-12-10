@@ -395,10 +395,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-1-initial-connection-network-setup" class="md-nav__link">
+  <a href="#part-1-wiring-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 1: Initial Connection &amp; Network Setup
+        Part 1: Wiring Setup
       
     </span>
   </a>
@@ -406,10 +406,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-2-accessing-the-web-interface" class="md-nav__link">
+  <a href="#part-2-network-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 2: Accessing the Web Interface
+        Part 2: Network Setup
       
     </span>
   </a>
@@ -417,10 +417,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-3-modbus-configuration" class="md-nav__link">
+  <a href="#part-3-accessing-the-web-interface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 3: Modbus Configuration
+        Part 3: Accessing the Web Interface
       
     </span>
   </a>
@@ -428,10 +428,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-4-cloud-configuration" class="md-nav__link">
+  <a href="#part-4-modbus-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 4: Cloud Configuration
+        Part 4: Modbus Configuration
       
     </span>
   </a>
@@ -439,10 +439,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-5-data-visualization" class="md-nav__link">
+  <a href="#part-5-cloud-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 5: Data Visualization
+        Part 5: Cloud Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-6-data-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 6: Data Visualization
       
     </span>
   </a>
@@ -495,10 +506,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-1-initial-connection-network-setup" class="md-nav__link">
+  <a href="#part-1-wiring-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 1: Initial Connection &amp; Network Setup
+        Part 1: Wiring Setup
       
     </span>
   </a>
@@ -506,10 +517,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-2-accessing-the-web-interface" class="md-nav__link">
+  <a href="#part-2-network-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 2: Accessing the Web Interface
+        Part 2: Network Setup
       
     </span>
   </a>
@@ -517,10 +528,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-3-modbus-configuration" class="md-nav__link">
+  <a href="#part-3-accessing-the-web-interface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 3: Modbus Configuration
+        Part 3: Accessing the Web Interface
       
     </span>
   </a>
@@ -528,10 +539,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-4-cloud-configuration" class="md-nav__link">
+  <a href="#part-4-modbus-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 4: Cloud Configuration
+        Part 4: Modbus Configuration
       
     </span>
   </a>
@@ -539,10 +550,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-5-data-visualization" class="md-nav__link">
+  <a href="#part-5-cloud-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part 5: Data Visualization
+        Part 5: Cloud Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-6-data-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 6: Data Visualization
       
     </span>
   </a>
@@ -572,12 +594,47 @@
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <ul>
 <li>A Yeti Gateway device</li>
-<li>The device's MAC address (specifically the last 4 digits)</li>
-<li>Local WiFi network credentials (SSID and Password)</li>
+<li>The device's MAC address (Provided with the device)</li>
+<li>RS485 modbus supported device (This doc uses MFM-384 energy meter as example)</li>
+<li>Either Wifi or Ethernet for Network Access</li>
 <li>Cloud server credentials and certificate files (Provided with the device)</li>
 </ul>
-<h3 id="part-1-initial-connection-network-setup">Part 1: Initial Connection &amp; Network Setup<a class="headerlink" href="#part-1-initial-connection-network-setup" title="Permanent link">&para;</a></h3>
-<p><a href=""></a></p>
+<h3 id="part-1-wiring-setup">Part 1: Wiring Setup<a class="headerlink" href="#part-1-wiring-setup" title="Permanent link">&para;</a></h3>
+<p>This setup explains how to connect the Energy Meter to the Gateway. This same A-to-A and B-to-B wiring rule applies to any device (like other meters, PLCs, or sensors) that communicates using the RS485 Modbus standard.</p>
+<ol>
+<li>Find the RS485 ports:<ol>
+<li>Look at the bottom left of the Energy Meter (MFM-384). You'll see two terminals labeled A and B.</li>
+<li>Look at the bottom section of the Yeti Gateway. You'll also see two terminals labeled A and B.</li>
+</ol>
+</li>
+<li>Make the Two Connections:<ol>
+<li>You need two wires. Do not mix up A and B!</li>
+<li>Use one wire to connect B on the Energy Meter to B on the Yeti Gateway.</li>
+<li>Use the second wire to connect A on the Energy Meter to A on the Yeti Gateway.<ul>
+<li>Rule: B must connect to B, and A must connect to A.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Check for Mistakes (The Polarity Check):<ul>
+<li>Make absolutely sure you did not switch A and B. The A wire must go to A, and the B wire must go to B. If you mix them up, it won't work!</li>
+</ul>
+</li>
+<li>Power Up:<ul>
+<li>Make sure you plug in and power on both the Energy Meter and the Yeti Gateway.</li>
+</ul>
+</li>
+</ol>
+<h3 id="part-2-network-setup">Part 2: Network Setup<a class="headerlink" href="#part-2-network-setup" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Option A: Ethernet Setup</p>
+<ul>
+<li>Connect a standard Ethernet cable from your network switch or router to the Ethernet port on the Yeti Gateway.</li>
+</ul>
+</li>
+<li>
+<p>Option B: Wifi Setup</p>
 <ol>
 <li>
 <p>Connect to the Access Point</p>
@@ -619,7 +676,9 @@
 </ol>
 </li>
 </ol>
-<h3 id="part-2-accessing-the-web-interface">Part 2: Accessing the Web Interface<a class="headerlink" href="#part-2-accessing-the-web-interface" title="Permanent link">&para;</a></h3>
+</li>
+</ul>
+<h3 id="part-3-accessing-the-web-interface">Part 3: Accessing the Web Interface<a class="headerlink" href="#part-3-accessing-the-web-interface" title="Permanent link">&para;</a></h3>
 <ol>
 <li>After the device restarts, it will be connected to your local network. You can now access it using its hostname rather than the direct access point.</li>
 <li>Connect your computer/phone to the same local network as the Yeti Gateway.</li>
@@ -628,21 +687,25 @@
 </ul>
 </li>
 <li>Log in again using the same credentials:
-      <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  Username: yeti-pro-admin
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  Username: yeti-pro-admin
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  Password: The last 4 digits of the device&#39;s MAC address.
 </span></code></pre></div></li>
 </ol>
-<h3 id="part-3-modbus-configuration">Part 3: Modbus Configuration<a class="headerlink" href="#part-3-modbus-configuration" title="Permanent link">&para;</a></h3>
+<h3 id="part-4-modbus-configuration">Part 4: Modbus Configuration<a class="headerlink" href="#part-4-modbus-configuration" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Configure Connection Settings </p>
+<p>Configure Connection Settings</p>
 <ol>
 <li>Navigate to the Connection tab.</li>
-<li>Configure the RTU/TCP Settings.<ul>
+<li>
+<p>Configure the RTU/TCP Settings.</p>
+<ul>
 <li>Note: These settings must match the settings of your connected Modbus devices.</li>
 </ul>
 </li>
-<li>Click Save RTU/TCP Settings.</li>
+<li>
+<p>Click Save RTU/TCP Settings.</p>
+</li>
 </ol>
 </li>
 <li>
@@ -656,7 +719,7 @@
 <li>Parameter Name</li>
 <li>Unit</li>
 <li>Register Address</li>
-<li>Register count </li>
+<li>Register count</li>
 <li>Data Type</li>
 <li>Scale</li>
 </ul>
@@ -668,13 +731,13 @@
 </ol>
 </li>
 </ol>
-<h3 id="part-4-cloud-configuration">Part 4: Cloud Configuration<a class="headerlink" href="#part-4-cloud-configuration" title="Permanent link">&para;</a></h3>
+<h3 id="part-5-cloud-configuration">Part 5: Cloud Configuration<a class="headerlink" href="#part-5-cloud-configuration" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Configure Server Settings</p>
 <ol>
 <li>Navigate to the Cloud tab.</li>
-<li>Enter the Server URL (e.g., mqtts://tb.example.com).</li>
+<li>Enter the Server URL (e.g., mqtts://72.60.205.104).</li>
 <li>Enter the Port (e.g., 8883).</li>
 <li>Select the QoS Level.</li>
 </ol>
@@ -698,7 +761,7 @@
 </ol>
 </li>
 </ol>
-<h3 id="part-5-data-visualization">Part 5: Data Visualization<a class="headerlink" href="#part-5-data-visualization" title="Permanent link">&para;</a></h3>
+<h3 id="part-6-data-visualization">Part 6: Data Visualization<a class="headerlink" href="#part-6-data-visualization" title="Permanent link">&para;</a></h3>
 <ol>
 <li>To Visualize the device is sending data:<ol>
 <li>Open a browser and navigate to the application server: <code>https://www.garud.cloud</code></li>

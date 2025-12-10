@@ -18,6 +18,8 @@ theme:
       accent: grey
       toggle: false
 markdown_extensions:
+  - extra:
+      tab_length: 4
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -42,27 +44,27 @@ markdown_extensions:
 plugins:
   - search:
       lang: en
-  # - to-pdf
+      # - to-pdf
 nav:
   - Overview: index.md
   - Features: feature.md
   - Hardware Specification: hardware.md
   - System Architecture: system_architecture.md
   - Device Setup: device_setup.md
-  # - API Reference:
-  #     - ThingsBoard Data: api/thingsboard_data.md
-  #     - System Configuration:
-  #         - Session Management: api/session.md
-  #         - Network Configuration: api/network.md
-  #         - ThingsBoard Configuration: api/thingsboard_setup.md
-  #         - Modbus Device Management: api/modbus_devices.md
-  #         - Modbus Connection Settings: api/modbus_connection.md
-  #         - Rs232 Communication: api/communication.md
-  #         - User Management: api/user.md
-  #         - System: api/system.md
-  #         - Status Response: api/response.md
-  # - Features:
-  #     - BLE: features/ble.md
-  # - Development:
-  #     - Development Principles: development/principle.md
-  #     - Coding Guidelines: development/coding_guidelines.md
+# - API Reference:
+#     - ThingsBoard Data: api/thingsboard_data.md
+#     - System Configuration:
+#         - Session Management: api/session.md
+#         - Network Configuration: api/network.md
+#         - ThingsBoard Configuration: api/thingsboard_setup.md
+#         - Modbus Device Management: api/modbus_devices.md
+#         - Modbus Connection Settings: api/modbus_connection.md
+#         - Rs232 Communication: api/communication.md
+#         - User Management: api/user.md
+#         - System: api/system.md
+#         - Status Response: api/response.md
+# - Features:
+#     - BLE: features/ble.md
+# - Development:
+#     - Development Principles: development/principle.md
+#     - Coding Guidelines: development/coding_guidelines.md

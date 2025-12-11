@@ -1,6 +1,6 @@
 This document outlines the step-by-step process for setting up and configuring the Yeti Gateway, including network connection, Modbus configuration, and cloud integration.
 
-### Prerequisites
+## Prerequisites
 
 - A Yeti Gateway device
 - The device's MAC address (Provided with the device)
@@ -8,12 +8,16 @@ This document outlines the step-by-step process for setting up and configuring t
 - Either Wifi or Ethernet for Network Access
 - Cloud server credentials and certificate files (Provided with the device)
 
-### Part 1: Wiring Setup
+## Part 1: Wiring Setup
 
-This setup explains how to connect the Energy Meter to the Gateway. This same A-to-A and B-to-B wiring rule applies to any device (like other meters, PLCs, or sensors) that communicates using the RS485 Modbus standard.
+This setup explains how to connect the Energy Meter to the Gateway. But This same **A-to-A \[ Red Wire \]** and **B-to-B \[ Blue Wire \]** wiring rule applies to any device (like other meters, PLCs, or sensors) that communicates using the RS485 Modbus standard.
+
+<p align="center">
+  <img src="./assets/images/gateway_wiring.jpg" width="100%">
+</p>
 
 1. Find the RS485 ports:
-    1. Look at the bottom left of the Energy Meter (MFM-384). You'll see two terminals labeled A and B.
+    1. Look at the top section of the Energy Meter (MFM-384). You'll see two terminals labeled A and B.
     2. Look at the bottom section of the Yeti Gateway. You'll also see two terminals labeled A and B.
 2. Make the Two Connections:
     1. You need two wires. Do not mix up A and B!
@@ -21,11 +25,11 @@ This setup explains how to connect the Energy Meter to the Gateway. This same A-
     3. Use the second wire to connect A on the Energy Meter to A on the Yeti Gateway.
         - Rule: B must connect to B, and A must connect to A.
 3. Check for Mistakes (The Polarity Check):
-    - Make absolutely sure you did not switch A and B. The A wire must go to A, and the B wire must go to B. If you mix them up, it won't work!
+    - Confirm that the A line is connected to A, and the B line is connected to B on both devices. Reversing these lines prevents proper communication.
 4. Power Up:
-    - Make sure you plug in and power on both the Energy Meter and the Yeti Gateway.
+    - Connect the 12 V power supply to the Yeti Gateway and power up the energy meter to begin operation.
 
-### Part 2: Network Setup
+## Part 2: Network Setup
 
 - Option A: Ethernet Setup
     - Connect a standard Ethernet cable from your network switch or router to the Ethernet port on the Yeti Gateway.
@@ -57,7 +61,7 @@ This setup explains how to connect the Energy Meter to the Gateway. This same A-
         4. Click Save WiFi Settings.
         5. Click Restart to apply the changes.
 
-### Part 3: Accessing the Web Interface
+## Part 3: Accessing the Web Interface
 
 1. After the device restarts, it will be connected to your local network. You can now access it using its hostname rather than the direct access point.
 2. Connect your computer/phone to the same local network as the Yeti Gateway.
@@ -69,7 +73,7 @@ This setup explains how to connect the Energy Meter to the Gateway. This same A-
       Password: The last 4 digits of the device's MAC address.
     ```
 
-### Part 4: Modbus Configuration
+## Part 4: Modbus Configuration
 
 1. Configure Connection Settings
     1. Navigate to the Connection tab.
@@ -95,7 +99,7 @@ This setup explains how to connect the Energy Meter to the Gateway. This same A-
     8. Click Back to Slave List.
     9. Finally, click Save Modbus Settings on the main Modbus page.
 
-### Part 5: Cloud Configuration
+## Part 5: Cloud Configuration
 
 1. Configure Server Settings
     1. Navigate to the Cloud tab.
@@ -113,7 +117,7 @@ This setup explains how to connect the Energy Meter to the Gateway. This same A-
     1. Click Save Cloud Settings.
     2. Click Restart in the top menu to apply the new cloud configuration.
 
-### Part 6: Data Visualization
+## Part 6: Data Visualization
 
 1. To Visualize the device is sending data:
     1. Open a browser and navigate to the application server: `https://www.garud.cloud`

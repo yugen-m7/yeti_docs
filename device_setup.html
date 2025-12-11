@@ -591,7 +591,7 @@
   <h1>Device Setup</h1>
 
 <p>This document outlines the step-by-step process for setting up and configuring the Yeti Gateway, including network connection, Modbus configuration, and cloud integration.</p>
-<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>A Yeti Gateway device</li>
 <li>The device's MAC address (Provided with the device)</li>
@@ -599,11 +599,15 @@
 <li>Either Wifi or Ethernet for Network Access</li>
 <li>Cloud server credentials and certificate files (Provided with the device)</li>
 </ul>
-<h3 id="part-1-wiring-setup">Part 1: Wiring Setup<a class="headerlink" href="#part-1-wiring-setup" title="Permanent link">&para;</a></h3>
-<p>This setup explains how to connect the Energy Meter to the Gateway. This same A-to-A and B-to-B wiring rule applies to any device (like other meters, PLCs, or sensors) that communicates using the RS485 Modbus standard.</p>
+<h2 id="part-1-wiring-setup">Part 1: Wiring Setup<a class="headerlink" href="#part-1-wiring-setup" title="Permanent link">&para;</a></h2>
+<p>This setup explains how to connect the Energy Meter to the Gateway. But This same <strong>A-to-A [ Red Wire ]</strong> and <strong>B-to-B [ Blue Wire ]</strong> wiring rule applies to any device (like other meters, PLCs, or sensors) that communicates using the RS485 Modbus standard.</p>
+<p align="center">
+  <img src="./assets/images/gateway_wiring.jpg" width="100%">
+</p>
+
 <ol>
 <li>Find the RS485 ports:<ol>
-<li>Look at the bottom left of the Energy Meter (MFM-384). You'll see two terminals labeled A and B.</li>
+<li>Look at the top section of the Energy Meter (MFM-384). You'll see two terminals labeled A and B.</li>
 <li>Look at the bottom section of the Yeti Gateway. You'll also see two terminals labeled A and B.</li>
 </ol>
 </li>
@@ -617,15 +621,15 @@
 </ol>
 </li>
 <li>Check for Mistakes (The Polarity Check):<ul>
-<li>Make absolutely sure you did not switch A and B. The A wire must go to A, and the B wire must go to B. If you mix them up, it won't work!</li>
+<li>Confirm that the A line is connected to A, and the B line is connected to B on both devices. Reversing these lines prevents proper communication.</li>
 </ul>
 </li>
 <li>Power Up:<ul>
-<li>Make sure you plug in and power on both the Energy Meter and the Yeti Gateway.</li>
+<li>Connect the 12 V power supply to the Yeti Gateway and power up the energy meter to begin operation.</li>
 </ul>
 </li>
 </ol>
-<h3 id="part-2-network-setup">Part 2: Network Setup<a class="headerlink" href="#part-2-network-setup" title="Permanent link">&para;</a></h3>
+<h2 id="part-2-network-setup">Part 2: Network Setup<a class="headerlink" href="#part-2-network-setup" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>Option A: Ethernet Setup</p>
@@ -678,7 +682,7 @@
 </ol>
 </li>
 </ul>
-<h3 id="part-3-accessing-the-web-interface">Part 3: Accessing the Web Interface<a class="headerlink" href="#part-3-accessing-the-web-interface" title="Permanent link">&para;</a></h3>
+<h2 id="part-3-accessing-the-web-interface">Part 3: Accessing the Web Interface<a class="headerlink" href="#part-3-accessing-the-web-interface" title="Permanent link">&para;</a></h2>
 <ol>
 <li>After the device restarts, it will be connected to your local network. You can now access it using its hostname rather than the direct access point.</li>
 <li>Connect your computer/phone to the same local network as the Yeti Gateway.</li>
@@ -691,7 +695,7 @@
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  Password: The last 4 digits of the device&#39;s MAC address.
 </span></code></pre></div></li>
 </ol>
-<h3 id="part-4-modbus-configuration">Part 4: Modbus Configuration<a class="headerlink" href="#part-4-modbus-configuration" title="Permanent link">&para;</a></h3>
+<h2 id="part-4-modbus-configuration">Part 4: Modbus Configuration<a class="headerlink" href="#part-4-modbus-configuration" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>Configure Connection Settings</p>
@@ -731,7 +735,7 @@
 </ol>
 </li>
 </ol>
-<h3 id="part-5-cloud-configuration">Part 5: Cloud Configuration<a class="headerlink" href="#part-5-cloud-configuration" title="Permanent link">&para;</a></h3>
+<h2 id="part-5-cloud-configuration">Part 5: Cloud Configuration<a class="headerlink" href="#part-5-cloud-configuration" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>Configure Server Settings</p>
@@ -761,7 +765,7 @@
 </ol>
 </li>
 </ol>
-<h3 id="part-6-data-visualization">Part 6: Data Visualization<a class="headerlink" href="#part-6-data-visualization" title="Permanent link">&para;</a></h3>
+<h2 id="part-6-data-visualization">Part 6: Data Visualization<a class="headerlink" href="#part-6-data-visualization" title="Permanent link">&para;</a></h2>
 <ol>
 <li>To Visualize the device is sending data:<ol>
 <li>Open a browser and navigate to the application server: <code>https://www.garud.cloud</code></li>

@@ -17,7 +17,7 @@ The Gateway supports RTU and TCP communication simultaneously, allowing integrat
   <img src="./assets/images/modbus_write.png" style="max-width: 45%; height: auto;">
   </div>
 
-## Remote Logging
+## Remote Monitoring
 
 Yeti’s Application Server `https://www.garud.cloud` provides secure remote access to your device data, allowing users to monitor and analyze real-time information from anywhere.
 

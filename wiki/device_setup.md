@@ -119,6 +119,8 @@ This setup explains how to connect the Energy Meter to the Gateway. But This sam
 
 ## Part 6: Data Visualization
 
+  ![dashboard_img](./assets/images/dashboard_mini_0.png)
+
 1. To Visualize the device is sending data:
     1. Open a browser and navigate to the application server: `https://www.garud.cloud`
     2. Log in with your user credentials.

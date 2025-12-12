@@ -5,7 +5,7 @@ The Yeti Industrial IoT Gateway is built around the powerful **Espressif ESP32-S
 <!-- ![hardware](./assets/images/outline/yeti.png) -->
 
 <p align="center">
-  <img src="./assets/images/outline/yeti.png" width="60%">
+    <img src="./assets/images/yeti-gateway.jpg" width="80%">
 </p>
 
 ### Key Components
